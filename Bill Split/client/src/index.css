@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* === Scrollbar Custom Styling (visible throughout your app) === */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #7c3aed; /* Tailwind purple-600 */
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a78bfa; /* Tailwind purple-400 */
+}
+
+/* Firefox scrollbar (fallback) */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #7c3aed transparent;
+}

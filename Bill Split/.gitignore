@@ -1,0 +1,70 @@
+# ========================
+# Node.js / JavaScript / TypeScript
+# ========================
+
+# Node modules (ignore in all subfolders)
+**/node_modules/
+
+# Build output
+**/dist/
+**/build/
+**/dist-ssr/
+**/.next/
+**/.turbo/
+**/.vercel/
+**/out/
+
+# Temporary files
+**/.cache/
+**/.parcel-cache/
+**/.nuxt/
+**/coverage/
+
+# Environment files (security risk if exposed)
+**/.env
+**/.env.*
+.env
+.env.*
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# ========================
+# OS / Editor / Tool files
+# ========================
+
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# VSCode
+.vscode/
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# JetBrains IDEs
+.idea/
+
+# Misc
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ========================
+# Firebase / Cloud Functions
+# ========================
+**/.firebase/
+**/firebase-debug.log
+**/.runtimeconfig.json
+
+# ========================
+# Optional: ignore production export (static build)
+**/public/export/
