@@ -38,10 +38,19 @@ export default function Navbar() {
           <div className="relative hidden md:block">
             <button
               onClick={() => setProfileOpen(!profileOpen)}
-              className="w-9 h-9 rounded-full bg-purple-600 text-white text-lg font-bold flex items-center justify-center"
+              className="w-9 h-9 rounded-full bg-purple-600 text-white text-lg font-bold flex items-center justify-center overflow-hidden"
             >
-              {user.username[0]?.toUpperCase()}
+              {user.profilePicture ? (
+                <img
+                  src={user.profilePicture}
+                  alt="Profile"
+                  className="w-full h-full object-cover"
+                />
+              ) : (
+                user.username[0]?.toUpperCase()
+              )}
             </button>
+            
             {profileOpen && (
               <div className="absolute right-0 mt-2 bg-gray-700 rounded shadow-md w-44 z-50">
                 <div className="px-4 py-2 border-b border-gray-600 font-semibold">

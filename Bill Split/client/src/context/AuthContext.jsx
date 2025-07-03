@@ -21,13 +21,20 @@ export const AuthProvider = ({ children }) => {
     setUser(null);
   };
 
+  const setProfilePicture = (newUrl) => {
+    if (!user) return;
+    const updatedUser = { ...user, profilePicture: newUrl };
+    localStorage.setItem("user", JSON.stringify(updatedUser));
+    setUser(updatedUser);
+  };
+
   useEffect(() => {
     const stored = localStorage.getItem("user");
     if (stored) setUser(JSON.parse(stored));
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, login, logout }}>
+    <AuthContext.Provider value={{ user, login, logout, setProfilePicture }}>
       {children}
     </AuthContext.Provider>
   );

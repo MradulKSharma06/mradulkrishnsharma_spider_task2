@@ -16,6 +16,8 @@ import Profile from './pages/Profile';
 import NotFound from './pages/NotFound';
 import AddExpense from './pages/AddExpense';
 import SettlePage from './pages/SettlePage';
+import ForgotPassword from './pages/ForgotPassword';
+import ResetPassword from './pages/ResetPassword';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
           {/* Public Routes */}
           <Route path="/login" element={<Login />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
 
           {/* Protected Routes with layout */}
           <Route

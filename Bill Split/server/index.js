@@ -7,6 +7,8 @@ const userRoutes = require('./routes/user');
 const groupRoutes = require('./routes/group');
 const expenseRoutes = require('./routes/expense');
 const settlementRoutes = require('./routes/settlement');
+const upload = require('./middleware/multer');
+const cloudinary = require('./utils/cloudinary');
 
 const app = express();
 app.use(cors());
@@ -15,6 +17,7 @@ app.use(express.json());
 mongoose.connect(process.env.MONGO_URI)
   .then(() => console.log("MongoDB connected"))
   .catch(err => console.error(err));
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
